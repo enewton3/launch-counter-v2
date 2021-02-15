@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "../../components/Card/Card";
+import LaunchCard from "../../components/LaunchCard/LaunchCard";
 import { getUpcomingLaunches } from "../../services/upcomingLaunches";
 
 export default function MainContainer() {
@@ -18,7 +18,7 @@ export default function MainContainer() {
     <div className="card-container">
       {launches &&
         launches.map((launch) => {
-          return <Card launch={launch} />;
+          return <LaunchCard launch={launch} />;
         })}
     </div>
   );
