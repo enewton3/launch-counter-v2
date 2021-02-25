@@ -1,17 +1,11 @@
-const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
-const axios = require("axios");
+import axios from "axios";
 
 const baseUrl =
-  process.env === "production"
-    ? "https://ll.thespacedevs.com/2.0.0/"
-    : "https://lldev.thespacedevs.com/2.0.0/";
-
-const headers = {
-  authorization: `token ${ACCESS_TOKEN}`,
-};
+  process.env.NODE_ENV === "production"
+    ? "https://launch-counter-api.herokuapp.com/"
+    : "http://localhost:3000";
 
 const api = axios.create({
-  headers: headers,
   baseURL: baseUrl,
 });
 

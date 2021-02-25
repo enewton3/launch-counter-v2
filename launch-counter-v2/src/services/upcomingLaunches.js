@@ -1,4 +1,4 @@
-import api from "./apiconfig";
+import api from "./llapiconfig";
 
 export const getUpcomingLaunches = async () => {
   const resp = await api.get("/launch/upcoming");
