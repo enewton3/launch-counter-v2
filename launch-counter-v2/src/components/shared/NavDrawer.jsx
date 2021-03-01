@@ -13,6 +13,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import CopyrightIcon from "@material-ui/icons/Copyright";
 import { UserContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
+import AlarmIcon from "@material-ui/icons/Alarm";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -39,6 +40,12 @@ export default function NavDrawer({
   const classes = useStyles();
   const loggedInOptions = (
     <>
+      <MenuItem className={classes.menuItem} divider>
+        <ListItemIcon>
+          <AlarmIcon />
+        </ListItemIcon>
+        My Launches
+      </MenuItem>
       <MenuItem
         className={classes.menuItem}
         onClick={() => {

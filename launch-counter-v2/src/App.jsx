@@ -13,6 +13,7 @@ import {
 import { UserContext } from "./context/UserContext";
 import SignUp from "./screens/SignUp/SignUp";
 import SignIn from "./screens/SignIn/SignIn";
+import Detail from "./screens/Detail/Detail";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -50,6 +51,9 @@ function App() {
       <UserContext.Provider value={currentUser}>
         <Layout handleLogout={handleLogout}>
           <Switch>
+            <Route path="/launch/:id">
+              <Detail />
+            </Route>
             <Route path="/signin">
               <SignIn handleLogin={handleLogin} />
             </Route>

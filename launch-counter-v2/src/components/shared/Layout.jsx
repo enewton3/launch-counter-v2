@@ -27,7 +27,9 @@ export default function Layout({ handleLogout, children }) {
       position: "absolute",
     },
   }));
+
   const classes = useStyles();
+
   return (
     <>
       <main className={classes.main}>{children}</main>

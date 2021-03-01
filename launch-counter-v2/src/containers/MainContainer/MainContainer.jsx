@@ -8,11 +8,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     width: "90vw",
     height: "100%",
-    display: "flex",
-    flexFlow: "column nowrap",
-    alignItems: "center",
-    justifyContent: "space-around",
-    // overflowY: "scroll",
+    // textAlign: "center",
+    // display: "flex",
+    // flexFlow: "column nowrap",
+    // alignItems: "center",
+    // justifyContent: "space-around",
+    overflowY: "scroll",
   },
 }));
 
